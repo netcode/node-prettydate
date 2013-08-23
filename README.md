@@ -12,6 +12,7 @@ inspired by the John Resig Pretty Date for jQuery (http://ejohn.org/blog/javascr
 ```javascript
 var prettyDate = require("prettyDate");
 console.log(prettyDate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET)")));
+```
 
 ## Examples
 ```javascript
@@ -32,6 +33,7 @@ console.log(pd.format(new Date("Fri Aug 10 2013 11:30:34 GMT+0200 (EET) ")));
 * 2 days ago
 * 5 days ago
 */
+```
 
 ## Contributions
 feel free to fork and add features , fix bugs and your pull reguest is more than welcome
