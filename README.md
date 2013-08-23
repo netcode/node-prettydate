@@ -26,6 +26,7 @@ console.log(prettydate.format(new Date("Fri Aug 21 2013 11:30:34 GMT+0200 (EET) 
 console.log(prettydate.format(new Date("Fri Aug 18 2013 11:30:34 GMT+0200 (EET) ")));
 console.log(prettydate.format(new Date("Fri Aug 10 2013 11:30:34 GMT+0200 (EET) ")));
 /* outputs
+* just now
 * 7 minutes  ago
 * 1 hour ago
 * 6 hours ago 
