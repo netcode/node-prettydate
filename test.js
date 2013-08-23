@@ -1,4 +1,4 @@
-var pd = require("prettyDate");
+var pd = require("pretty-date");
 
 console.log(pd.format(new Date()));
 console.log(pd.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET) ")));

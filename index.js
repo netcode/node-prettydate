@@ -1,4 +1,4 @@
-var prettyDate =
+var prettydate =
 {
 	'format':function (dateTime) {
 
@@ -24,4 +24,4 @@ var prettyDate =
 	}
 }
  
-module.exports = prettyDate;
+module.exports = prettydate;

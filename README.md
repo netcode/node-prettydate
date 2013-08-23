@@ -7,24 +7,24 @@ inspired by the John Resig Pretty Date for jQuery (http://ejohn.org/blog/javascr
 
 ## Usage
 
-`npm install prettyDate`
+`npm install pretty-date`
 
 ```javascript
-var prettyDate = require("prettyDate");
-console.log(prettyDate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET)")));
+var prettydate = require("pretty-date");
+console.log(prettydate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET)")));
 ```
 
 ## Examples
 ```javascript
-var prettyDate = require("prettyDate");
-console.log(pd.format(new Date())); 
-console.log(pd.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET) "))); 
-console.log(pd.format(new Date("Fri Aug 23 2013 16:30:34 GMT+0200 (EET) "))); 
-console.log(pd.format(new Date("Fri Aug 23 2013 11:30:34 GMT+0200 (EET) "))); 
-console.log(pd.format(new Date("Fri Aug 22 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 21 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 18 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 10 2013 11:30:34 GMT+0200 (EET) ")));
+var prettydate = require("pretty-date");
+console.log(prettydate.format(new Date())); 
+console.log(prettydate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET) "))); 
+console.log(prettydate.format(new Date("Fri Aug 23 2013 16:30:34 GMT+0200 (EET) "))); 
+console.log(prettydate.format(new Date("Fri Aug 23 2013 11:30:34 GMT+0200 (EET) "))); 
+console.log(prettydate.format(new Date("Fri Aug 22 2013 11:30:34 GMT+0200 (EET) ")));
+console.log(prettydate.format(new Date("Fri Aug 21 2013 11:30:34 GMT+0200 (EET) ")));
+console.log(prettydate.format(new Date("Fri Aug 18 2013 11:30:34 GMT+0200 (EET) ")));
+console.log(prettydate.format(new Date("Fri Aug 10 2013 11:30:34 GMT+0200 (EET) ")));
 /* outputs
 * 7 minutes  ago
 * 1 hour ago
