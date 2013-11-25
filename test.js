@@ -1,6 +1,8 @@
 var pd = require("./index");
 
 console.log(pd.format(new Date()));
+console.log(pd.format(new Date( new Date() - 1*1000 )));
+console.log(pd.format(new Date( new Date() - 2*1000 )));
 console.log(pd.format(new Date( new Date() - 60*1000 )));
 console.log(pd.format(new Date( new Date() - 2*60*1000 )));
 console.log(pd.format(new Date( new Date() - 60*60*1000 )));
