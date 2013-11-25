@@ -1,7 +1,7 @@
 function createHandler(divisor,noun,restOfString){
 	return function(diff){
 		var n = Math.floor(diff/divisor);
-		var pluralizedNoun = noun + (n>1?'s':'');
+		var pluralizedNoun = noun + ( n > 1 ? 's' : '' );
 		return "" + n + " " + pluralizedNoun + " " + restOfString;
 	}
 }
