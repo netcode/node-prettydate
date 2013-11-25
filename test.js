@@ -1,10 +1,13 @@
-var pd = require("pretty-date");
+var pd = require("./index");
 
 console.log(pd.format(new Date()));
-console.log(pd.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 23 2013 16:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 23 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 22 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 21 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 18 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(pd.format(new Date("Fri Aug 10 2013 11:30:34 GMT+0200 (EET) ")));
+console.log(pd.format(new Date( new Date() - 60*1000 )));
+console.log(pd.format(new Date( new Date() - 2*60*1000 )));
+console.log(pd.format(new Date( new Date() - 60*60*1000 )));
+console.log(pd.format(new Date( new Date() - 2*60*60*1000 )));
+console.log(pd.format(new Date( new Date() - 24*60*60*1000 )));
+console.log(pd.format(new Date( new Date() - 2*24*60*60*1000 )));
+console.log(pd.format(new Date( new Date() - 30*24*60*60*1000 )));
+console.log(pd.format(new Date( new Date() - 2*30*24*60*60*1000 )));
+console.log(pd.format(new Date( new Date() - 365*24*60*60*1000 )));
+console.log(pd.format(new Date( new Date() - 2*365*24*60*60*1000 )));
