@@ -18,8 +18,8 @@ console.log(prettydate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET)"
 ## Examples
 ```javascript
 var prettydate = require("pretty-date");
-console.log( prettydate.format( new Date()));
-console.log( prettydate.format( new Date( new Date() - 1*1000 )));
+console.log( prettydate.format( new Date())); 
+console.log( prettydate.format( new Date( new Date() - 1*1000 ))); 
 console.log( prettydate.format( new Date( new Date() - 2*1000 )));
 console.log( prettydate.format( new Date( new Date() - 60*1000 )));
 console.log( prettydate.format( new Date( new Date() - 2*60*1000 )));
