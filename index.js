@@ -1,26 +1,32 @@
-var prettydate =
-{
-	'format':function (dateTime) {
+function createHandler(divisor,noun,restOfString){
+	return function(diff){
+		var n = Math.floor(diff/divisor);
+		var pluralizedNoun = noun + ( n > 1 ? 's' : '' );
+		return "" + n + " " + pluralizedNoun + " " + restOfString;
+	}
+}
 
-		var date = dateTime,
-		diff = (((new Date()).getTime() - date.getTime()) / 1000),
-		day_diff = Math.floor(diff / 86400);
+var formatters = [
+	{ threshold: 1,        handler: function(){ return      "just now" } },
+	{ threshold: 60,       handler: createHandler(1,        "second",    "ago" ) },
+	{ threshold: 3600,     handler: createHandler(60,       "minute",    "ago" ) },
+	{ threshold: 86400,    handler: createHandler(3600,     "hour",      "ago" ) },
+	{ threshold: 172800,   handler: function(){ return      "yesterday" } },
+	{ threshold: 604800,   handler: createHandler(86400,    "day",       "ago" ) },
+	{ threshold: 2592000,  handler: createHandler(604800,   "week",      "ago" ) },
+	{ threshold: 31536000, handler: createHandler(2592000,  "month",     "ago" ) },
+	{ threshold: Infinity, handler: createHandler(31536000, "year",      "ago" ) }
+];
 
-
-		//var res = "0"; 	
-		//console.log(diff);
-		var res = (diff < 60 )? "just now":"0";		
-		res = (diff < 120 && res == 0)? "1 minute ago":res;
-		res = (diff < 180 && res == 0)? "2 minutes ago":res;
-		res = (diff < 3600 &&  res == 0)?  ( ( (diff / 60) <= 10 ) ? Math.floor(diff / 60)+' minutes  ago' :  Math.floor(diff / 60)+" minutes  ago" ):res;
-		res = (diff < 7200 &&  res == 0)? "1 hour ago":res;
-		res = (diff < 10800 &&  res == 0)? "2 hours ago":res;
-		res = (diff < 86400 &&  res == 0)?  ( ( (diff / 3600) <= 10 ) ? Math.floor(diff / 3600)+' hours ago ' :  Math.floor(diff / 3600)+" hours ago " ):res;
-		res = (diff < 172800 && res == 0)?'Yesterday':res;
-		res = (diff < 259200 &&  res == 0)?'2 days ago':res;
-		res = (diff < 604800 && res == 0)? (Math.floor(diff / 86400 )) + ' days ago': res;
-		res = ( res == 0)?date:res;
-		return res;
+var prettydate = {
+	format: function (date) {
+		var diff = (((new Date()).getTime() - date.getTime()) / 1000);
+		for( var i=0; i<formatters.length; i++ ){
+			if( diff < formatters[i].threshold ){
+				return formatters[i].handler(diff);
+			}
+		}
+		throw new Error("exhausted all formatter options, none found"); //should never be reached
 	}
 }
  
