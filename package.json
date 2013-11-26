@@ -1,6 +1,6 @@
 {
   "name": "pretty-date",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "format old JavaScript dates in a “pretty” way. ex : 2 hours ago , 3 minutes ago",
   "main": "index.js",  
   "repository": {

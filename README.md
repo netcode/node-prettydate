@@ -18,22 +18,34 @@ console.log(prettydate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET)"
 ## Examples
 ```javascript
 var prettydate = require("pretty-date");
-console.log(prettydate.format(new Date())); 
-console.log(prettydate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET) "))); 
-console.log(prettydate.format(new Date("Fri Aug 23 2013 16:30:34 GMT+0200 (EET) "))); 
-console.log(prettydate.format(new Date("Fri Aug 23 2013 11:30:34 GMT+0200 (EET) "))); 
-console.log(prettydate.format(new Date("Fri Aug 22 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(prettydate.format(new Date("Fri Aug 21 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(prettydate.format(new Date("Fri Aug 18 2013 11:30:34 GMT+0200 (EET) ")));
-console.log(prettydate.format(new Date("Fri Aug 10 2013 11:30:34 GMT+0200 (EET) ")));
+console.log( prettydate.format( new Date()));
+console.log( prettydate.format( new Date( new Date() - 1*1000 )));
+console.log( prettydate.format( new Date( new Date() - 2*1000 )));
+console.log( prettydate.format( new Date( new Date() - 60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 2*60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 60*60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 2*60*60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 24*60*60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 2*24*60*60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 30*24*60*60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 2*30*24*60*60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 365*24*60*60*1000 )));
+console.log( prettydate.format( new Date( new Date() - 2*365*24*60*60*1000 )));
+
 /* outputs
 * just now
-* 7 minutes  ago
+* 1 second ago
+* 2 seconds ago
+* 1 minute ago
+* 2 minutes ago
 * 1 hour ago
-* 6 hours ago 
-* Yesterday
+* 2 hours ago
+* yesterday
 * 2 days ago
-* 5 days ago
+* 1 month ago
+* 2 months ago
+* 1 year ago
+* 2 years ago
 */
 ```
 
