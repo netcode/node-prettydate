@@ -29,5 +29,11 @@ var prettydate = {
 		throw new Error("exhausted all formatter options, none found"); //should never be reached
 	}
 }
- 
-module.exports = prettydate;
+
+// for nodejs env
+if (typeof module !== 'undefined'){
+	module.exports = prettydate;
+}
+
+// for meteor env
+PrettyDate = prettydate;

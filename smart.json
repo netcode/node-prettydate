@@ -1,0 +1,11 @@
+{
+  "name": "prettydate",
+  "description": "format old JavaScript dates in a “pretty” way. ex : 2 hours ago , 3 minutes ago",
+  "homepage": "https://github.com/sergeyt/node-prettydate",
+  "author": "netcode",
+  "version": "0.2.0",
+  "git": "https://github.com/sergeyt/node-prettydate.git",
+  "packages": {
+    "prettydate": {}
+  }
+}
