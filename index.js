@@ -3,15 +3,15 @@ function createHandler(divisor,noun,restOfString){
 		var n = Math.floor(diff/divisor);
 		var pluralizedNoun = noun + ( n > 1 ? 's' : '' );
 		return "" + n + " " + pluralizedNoun + " " + restOfString;
-	}
+	};
 }
 
 var formatters = [
-	{ threshold: 1,        handler: function(){ return      "just now" } },
+	{ threshold: 1,        handler: function(){ return      "just now"; } },
 	{ threshold: 60,       handler: createHandler(1,        "second",    "ago" ) },
 	{ threshold: 3600,     handler: createHandler(60,       "minute",    "ago" ) },
 	{ threshold: 86400,    handler: createHandler(3600,     "hour",      "ago" ) },
-	{ threshold: 172800,   handler: function(){ return      "yesterday" } },
+	{ threshold: 172800,   handler: function(){ return      "yesterday"; } },
 	{ threshold: 604800,   handler: createHandler(86400,    "day",       "ago" ) },
 	{ threshold: 2592000,  handler: createHandler(604800,   "week",      "ago" ) },
 	{ threshold: 31536000, handler: createHandler(2592000,  "month",     "ago" ) },
@@ -28,6 +28,6 @@ var prettydate = {
 		}
 		throw new Error("exhausted all formatter options, none found"); //should never be reached
 	}
-}
+};
  
 module.exports = prettydate;
