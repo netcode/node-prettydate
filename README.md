@@ -75,4 +75,4 @@ console.log( prettydate.format( new Date( new Date() - 2*365*24*60*60*1000 )));
 ```
 
 ## Contributions
-feel free to fork and add features , fix bugs and your pull reguest is more than welcome
+feel free to fork and add features , fix bugs and your pull request is more than welcome
