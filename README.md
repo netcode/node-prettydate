@@ -11,39 +11,57 @@ inspired by the John Resig Pretty Date plugin for jQuery (http://ejohn.org/blog/
 `npm install pretty-date`
 
 ```javascript
-var prettydate = require("pretty-date");
-console.log(prettydate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET)")));
+const prettydate = require("pretty-date")
+console.log(prettydate.format(new Date("Fri Aug 23 2013 17:30:34 GMT+0200 (EET)")))
 ```
 
-## Examples
-```javascript
-var prettydate = require("pretty-date");
+## API
 
-console.log( prettydate.format( new Date( new Date() - -2*365*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -365*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*30*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -30*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -60*1000 )));
-console.log( prettydate.format( new Date( new Date() - -2*1000 )));
-console.log( prettydate.format( new Date( new Date() - -1*1000 )));
-console.log( prettydate.format( new Date()));
-console.log( prettydate.format( new Date( new Date() - 1*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*1000 )));
-console.log( prettydate.format( new Date( new Date() - 60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 30*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*30*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 365*24*60*60*1000 )));
-console.log( prettydate.format( new Date( new Date() - 2*365*24*60*60*1000 )));
+## `prettydate.format(date)`
+
+Returns the formated date
+
+- date: Date
+
+## `prettydate.setLocale(locale)`
+
+Sets the locale for the following format calls
+
+- locale: string  Supported values are:
+  - 'en-US': English(default)
+  - 'pt-BR': Portuguese 
+
+## Examples
+
+### Formating
+```javascript
+const prettydate = require("pretty-date")
+
+console.log( prettydate.format( new Date( new Date() - -2*365*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -365*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -2*30*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -30*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -2*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -2*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -2*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -2*1000 )))
+console.log( prettydate.format( new Date( new Date() - -1*1000 )))
+console.log( prettydate.format( new Date()))
+console.log( prettydate.format( new Date( new Date() - 1*1000 )))
+console.log( prettydate.format( new Date( new Date() - 2*1000 )))
+console.log( prettydate.format( new Date( new Date() - 60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 2*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 2*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 2*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 30*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 2*30*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 365*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 2*365*24*60*60*1000 )))
 
 /* outputs
 * 2 years from now
@@ -71,6 +89,23 @@ console.log( prettydate.format( new Date( new Date() - 2*365*24*60*60*1000 )));
 * 2 months ago
 * 1 year ago
 * 2 years ago
+*/
+```
+### Languages
+```javascript
+const prettydate = require("pretty-date")
+prettydate.setLocale('pt-BR')
+
+console.log( prettydate.format( new Date( new Date() - -2*365*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - -365*24*60*60*1000 )))
+
+console.log( prettydate.format( new Date( new Date() - 365*24*60*60*1000 )))
+console.log( prettydate.format( new Date( new Date() - 2*365*24*60*60*1000 )))
+/* outputs
+* em 2 anos
+* em 1 ano
+* 2 anos atrás
+* 1 ano atrás
 */
 ```
 
