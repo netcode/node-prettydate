@@ -25,9 +25,9 @@ Returns the formated date
 
 ## `prettydate.setLocale(locale)`
 
-Sets the locale for the following format calls
+Sets the locale for the following `format` calls
 
-- locale: string  Supported values are:
+- locale: string, supported values are:
   - 'en-US': English(default)
   - 'pt-BR': Portuguese 
 
