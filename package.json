@@ -2,7 +2,7 @@
   "name": "pretty-date",
   "version": "0.2.0",
   "description": "format old JavaScript dates in a “pretty” way. ex : 2 hours ago , 3 minutes ago",
-  "main": "index.js",  
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/netcode/node-prettydate.git"
@@ -14,5 +14,23 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/netcode/node-prettydate/issues"
+  },
+  "scripts": {
+    "build": "browserify index.js -o lib/index.js -t [ babelify --presets [ es2015 ] ]",
+    "test": "standard"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "standard": "^10.0.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0"
+  },
+  "standard": {
+    "ignore": [
+      "/lib"
+    ],
+    "global": [
+      "Package"
+    ]
   }
 }
