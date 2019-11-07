@@ -6,6 +6,8 @@ function createHandler(divisor,noun,restOfString){
 	}
 }
 
+
+
 var formatters = [
 	{ threshold: -31535999, handler: createHandler(-31536000,	"year",     "from now" ) },
 	{ threshold: -2591999, 	handler: createHandler(-2592000,  	"month",    "from now" ) },
